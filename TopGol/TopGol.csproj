@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09401D47-29CE-4E98-B6B7-76715983CE8F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TopGol</RootNamespace>
+    <AssemblyName>TopGol</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\circular.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\circular.Designer.cs">
+      <DependentUpon>circular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\controlConvidado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\controlConvidado.Designer.cs">
+      <DependentUpon>controlConvidado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\telaAutenticacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\telaAutenticacao.Designer.cs">
+      <DependentUpon>telaAutenticacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Competicao.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dados.cs" />
+    <Compile Include="Models\Jogos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notificacao.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pergunta.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Selecao.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\autenticacao\redefinir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\autenticacao\redefinir.Designer.cs">
+      <DependentUpon>redefinir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\autenticacao\cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\autenticacao\cadastro.Designer.cs">
+      <DependentUpon>cadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\autenticacao\esqueciSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\autenticacao\esqueciSenha.Designer.cs">
+      <DependentUpon>esqueciSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\autenticacao\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\autenticacao\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\autenticacao\novaSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\autenticacao\novaSenha.Designer.cs">
+      <DependentUpon>novaSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\FormsParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\FormsParent.Designer.cs">
+      <DependentUpon>FormsParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jogoShow.cs" />
+    <Compile Include="PAGES\telaBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\telaBase.Designer.cs">
+      <DependentUpon>telaBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\Navegacoes\configuracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\Navegacoes\configuracao.Designer.cs">
+      <DependentUpon>configuracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\editarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\editarPerfil.Designer.cs">
+      <DependentUpon>editarPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\Convidado\novoConvidado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\Convidado\novoConvidado.Designer.cs">
+      <DependentUpon>novoConvidado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\Convidado\telaConvidados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\Convidado\telaConvidados.Designer.cs">
+      <DependentUpon>telaConvidados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\Navegacoes\telaDetalhesNotificacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\Navegacoes\telaDetalhesNotificacao.Designer.cs">
+      <DependentUpon>telaDetalhesNotificacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\Navegacoes\telaJogos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\Navegacoes\telaJogos.Designer.cs">
+      <DependentUpon>telaJogos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\Navegacoes\telaNotificacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\Navegacoes\telaNotificacoes.Designer.cs">
+      <DependentUpon>telaNotificacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAGES\Navegacoes\telaRanking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\Navegacoes\telaRanking.Designer.cs">
+      <DependentUpon>telaRanking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\controlConvidado.resx">
+      <DependentUpon>controlConvidado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\telaAutenticacao.resx">
+      <DependentUpon>telaAutenticacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\autenticacao\redefinir.resx">
+      <DependentUpon>redefinir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\autenticacao\cadastro.resx">
+      <DependentUpon>cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\autenticacao\esqueciSenha.resx">
+      <DependentUpon>esqueciSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\autenticacao\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\autenticacao\novaSenha.resx">
+      <DependentUpon>novaSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\FormsParent.resx">
+      <DependentUpon>FormsParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\Navegacoes\configuracao.resx">
+      <DependentUpon>configuracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\telaBase.resx">
+      <DependentUpon>telaBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\editarPerfil.resx">
+      <DependentUpon>editarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\Convidado\novoConvidado.resx">
+      <DependentUpon>novoConvidado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\Convidado\telaConvidados.resx">
+      <DependentUpon>telaConvidados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\Navegacoes\telaDetalhesNotificacao.resx">
+      <DependentUpon>telaDetalhesNotificacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\Navegacoes\telaJogos.resx">
+      <DependentUpon>telaJogos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\Navegacoes\telaNotificacoes.resx">
+      <DependentUpon>telaNotificacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAGES\Navegacoes\telaRanking.resx">
+      <DependentUpon>telaRanking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="Models\README.md" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\SemFoto.png" />
+    <None Include="Resources\add.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
