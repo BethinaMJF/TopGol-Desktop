@@ -13,7 +13,8 @@ namespace TopGol.PAGES.autenticacao
 {
     public partial class esqueciSenha : FormsParent
     {
-        ModuloDesktopEntities ct = new ModuloDesktopEntities();
+
+        dbTopGolEntities ct = new dbTopGolEntities();
         List<Pergunta> listaPerguntas = new List<Pergunta>();
         public TextBox textBox { get; set; }
         public DateTimePicker dateTimePicker { get; set; } = new DateTimePicker() { Format = DateTimePickerFormat.Short };

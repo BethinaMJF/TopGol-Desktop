@@ -12,7 +12,7 @@ namespace TopGol.PAGES
 {
     public partial class telaRanking : FormsParent
     {
-        private ModuloDesktopEntities ct = new ModuloDesktopEntities();
+        private dbTopGolEntities ct = new dbTopGolEntities();
 
         public telaRanking()
         {

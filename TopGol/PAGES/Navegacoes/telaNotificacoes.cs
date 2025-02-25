@@ -13,7 +13,8 @@ namespace TopGol.PAGES
 {
     public partial class telaNotificacoes : FormsParent
     {
-        ModuloDesktopEntities ct = new ModuloDesktopEntities();
+
+        dbTopGolEntities ct = new dbTopGolEntities();
         public telaNotificacoes()
         {
             InitializeComponent();

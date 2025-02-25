@@ -17,7 +17,8 @@ namespace TopGol.PAGES
 {
     public partial class editarPerfil : FormsParent
     {
-        ModuloDesktopEntities ct = new ModuloDesktopEntities();
+
+        dbTopGolEntities ct = new dbTopGolEntities();
         public string cor { get; set; }
         public string time { get; set; }
         public MemoryStream ms { get; set; } = new MemoryStream();

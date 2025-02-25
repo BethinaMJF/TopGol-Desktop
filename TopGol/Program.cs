@@ -22,7 +22,7 @@ namespace TopGol
             var config = new Settings();
             if (config.lembrar != "")
             {
-                Models. dados.atual = new Models.ModuloDesktopEntities().Usuarios.FirstOrDefault(x => x.Email == config.lembrar);
+                Models. dados.atual = new Models.dbTopGolEntities().Usuarios.FirstOrDefault(x => x.Email == config.lembrar);
                 Application.Run(new telaBase());
 
             }

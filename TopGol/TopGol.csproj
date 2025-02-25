@@ -67,16 +67,9 @@
     <Compile Include="Controls\controlConvidado.Designer.cs">
       <DependentUpon>controlConvidado.cs</DependentUpon>
     </Compile>
-    <Compile Include="PAGES\telaAutenticacao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PAGES\telaAutenticacao.Designer.cs">
-      <DependentUpon>telaAutenticacao.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Competicao.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\dados.cs" />
     <Compile Include="Models\Jogos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -110,6 +103,13 @@
     <Compile Include="Models\Usuarios.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="PAGES\telaAutenticacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAGES\telaAutenticacao.Designer.cs">
+      <DependentUpon>telaAutenticacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dados.cs" />
     <Compile Include="PAGES\autenticacao\redefinir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,7 +266,6 @@
     <None Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
-    <None Include="Models\README.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -290,8 +289,8 @@
     <Content Include=".gitignore" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

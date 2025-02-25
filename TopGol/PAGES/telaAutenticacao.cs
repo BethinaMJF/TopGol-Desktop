@@ -16,7 +16,7 @@ namespace TopGol
 {
     public partial class telaAutenticacao : FormsParent
     {
-        ModuloDesktopEntities ct = new ModuloDesktopEntities();
+        dbTopGolEntities ct = new dbTopGolEntities();
         public telaAutenticacao()
         {
             InitializeComponent();

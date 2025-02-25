@@ -15,7 +15,9 @@ namespace TopGol.PAGES
 {
     public partial class telaConvidados : FormsParent
     {
-        ModuloDesktopEntities ct = new ModuloDesktopEntities();
+
+        dbTopGolEntities ct = new dbTopGolEntities();
+
 
         public telaConvidados()
         {

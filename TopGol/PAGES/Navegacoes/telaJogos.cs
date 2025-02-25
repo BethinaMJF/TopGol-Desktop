@@ -13,7 +13,8 @@ namespace TopGol.PAGES
 {
     public partial class telaJogos : FormsParent
     {
-        public ModuloDesktopEntities ct = new ModuloDesktopEntities();
+
+        public dbTopGolEntities ct = new dbTopGolEntities();
 
         public telaJogos()
         {

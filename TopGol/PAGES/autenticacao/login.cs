@@ -15,7 +15,8 @@ namespace TopGol.PAGES.autenticacao
 {
     public partial class login : FormsParent
     {
-        ModuloDesktopEntities ct = new ModuloDesktopEntities();
+
+        dbTopGolEntities ct = new dbTopGolEntities();
         public string senha { get; set; }
 
         public login()

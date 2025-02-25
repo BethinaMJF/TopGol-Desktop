@@ -22,7 +22,8 @@ namespace TopGol.PAGES.autenticacao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var ct = new ModuloDesktopEntities();
+
+            var ct = new dbTopGolEntities();
             var user = ct.Usuarios.FirstOrDefault(u => u.Email == dados.atual.Email);
             user.Senha = textBox1.Text;
             ct.SaveChanges();

@@ -16,7 +16,8 @@ namespace TopGol.PAGES.autenticacao
 {
     public partial class cadastro : FormsParent
     {
-        ModuloDesktopEntities ct = new ModuloDesktopEntities();
+
+        dbTopGolEntities ct = new dbTopGolEntities();
         public MemoryStream ms { get; set; } = new MemoryStream();
         public string cor { get; set; }
         public string time { get; set; }

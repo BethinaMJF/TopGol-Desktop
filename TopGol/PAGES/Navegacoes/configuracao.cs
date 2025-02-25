@@ -14,7 +14,8 @@ namespace TopGol.PAGES
 {
     public partial class configuracao : FormsParent
     {
-        ModuloDesktopEntities ct = new ModuloDesktopEntities();
+
+        dbTopGolEntities ct = new dbTopGolEntities();
         public configuracao()
         {
             InitializeComponent();

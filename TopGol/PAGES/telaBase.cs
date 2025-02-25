@@ -14,7 +14,7 @@ namespace TopGol.PAGES.autenticacao
 {
     public partial class telaBase : Form
     {
-        ModuloDesktopEntities ct = new ModuloDesktopEntities();
+        dbTopGolEntities ct = new dbTopGolEntities();
         private Queue<Notificacao> filaNotificacoes = new Queue<Notificacao>();
 
         public telaBase()
@@ -58,7 +58,7 @@ namespace TopGol.PAGES.autenticacao
             if (filaNotificacoes.Count == 0) return;
 
             var notificacao = filaNotificacoes.Dequeue();
-            using (var context = new ModuloDesktopEntities())
+            using (var context = new dbTopGolEntities())
             {
                 var notif = context.Notificacao.FirstOrDefault(n => n.id == notificacao.id);
                 if (notif != null)

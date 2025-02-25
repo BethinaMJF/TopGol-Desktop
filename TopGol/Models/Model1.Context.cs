@@ -13,10 +13,10 @@ namespace TopGol.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ModuloDesktopEntities : DbContext
+    public partial class dbTopGolEntities : DbContext
     {
-        public ModuloDesktopEntities()
-            : base("name=ModuloDesktopEntities")
+        public dbTopGolEntities()
+            : base("name=dbTopGolEntities")
         {
         }
     
